@@ -52,4 +52,3 @@ public abstract class ArrayBasedUnicodeEscaper {
     protected final int nextEscapeIndex(CharSequence csq, int index, int end) {
         return index;
     }
-}
