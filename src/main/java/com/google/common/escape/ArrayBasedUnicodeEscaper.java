@@ -14,7 +14,8 @@ public abstract class ArrayBasedUnicodeEscaper {
     private char safeMaxChar;
 
     protected ArrayBasedUnicodeEscaper() {
-        /* This is a bit of a hack but lets us do quicker per-character checks in
+        /*
+        This is a bit of a hack but lets us do quicker per-character checks in
         the fast path code. The safe min/max values are very unlikely to extend
         into the range of surrogate characters, but if they do we must not test
         any values in that range. 
@@ -38,17 +39,15 @@ public abstract class ArrayBasedUnicodeEscaper {
         }
     }
 
-    /*
-    This is overridden to improve performance. Rough benchmarking shows that this almost doubles
+    
+    //This is overridden to improve performance. Rough benchmarking shows that this almost doubles
     the speed when processing strings that do not require any escaping.
-    */
     public final String escape(String s) {
         return s;
     }
 
-    /* 
-    Overridden for performance. 
-    */
+    
+    //Overridden for performance. 
     protected final int nextEscapeIndex(CharSequence csq, int index, int end) {
         return index;
     }
