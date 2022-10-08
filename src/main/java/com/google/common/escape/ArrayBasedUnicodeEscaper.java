@@ -32,6 +32,11 @@ public abstract class ArrayBasedUnicodeEscaper {
         }
     }
 
+// 编写注释
+/**
+    
+
+ */
     /*
      * This is overridden to improve performance. Rough benchmarking shows that this almost doubles
      * the speed when processing strings that do not require any escaping.
