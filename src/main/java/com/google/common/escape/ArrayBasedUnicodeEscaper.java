@@ -40,8 +40,9 @@ public abstract class ArrayBasedUnicodeEscaper {
         return s;
     }
 
-    /* Overridden 
-    for performance. 
+    /*
+    *Overridden 
+    *for performance. 
     */
     protected final int nextEscapeIndex(CharSequence csq, int index, int end) {
         return index;
